@@ -1,0 +1,49 @@
+{
+  "_from": "react-native-aliyun-playview-x",
+  "_id": "react-native-aliyun-playview-x@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-a1hp1GwbDNT/vUeLnMJmoZJSjWblNF9PI9qY41k5cBNugQOOFmY5VPYz5se08JUtb8CN86C4SHUK+qfzRyhYXQ==",
+  "_location": "/react-native-aliyun-playview-x",
+  "_phantomChildren": {
+    "csstype": "2.6.5",
+    "fbjs": "0.8.17"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-aliyun-playview-x",
+    "name": "react-native-aliyun-playview-x",
+    "escapedName": "react-native-aliyun-playview-x",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@types/lodash.debounce": "4.0.3",
+    "@types/prop-types": "15.5.2",
+    "@types/react": "16.4.7",
+    "@types/react-native": "0.49.5",
+    "lodash.debounce": "4.0.8",
+    "prop-types": "15.5.8",
+    "ts-object-utils": "0.0.5"
+  },
+  "deprecated": false,
+  "description": "阿里云点播组件的封装",
+  "devDependencies": {
+    "@types/lodash.debounce": "4.0.3",
+    "@types/prop-types": "15.5.2",
+    "@types/react": "16.4.7",
+    "@types/react-native": "0.49.5"
+  },
+  "keywords": [
+    "aliyun",
+    "video",
+    "native",
+    "react-native-aliyun-playview-x"
+  ],
+  "license": "MIT",
+  "main": "src/AliyunPlayView.js",
+  "name": "react-native-aliyun-playview-x",
+  "version": "1.0.3"
+}
