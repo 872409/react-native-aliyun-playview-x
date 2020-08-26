@@ -7,12 +7,12 @@ Pod::Spec.new do |s|
   s.version      = package['version']
   s.summary      = package['description']
 
-  s.authors      = { 'Bozaigao' => '1054539528@qq.com' }
+  s.authors      = { 'xx' => 'xx@qq.com' }
   s.homepage     = package['homepage']
   s.license      = package['license']
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/bozaigao/react-native-aliyun-playview" }
+  s.source       = { :git => "https://github.com/872409/react-native-aliyun-playview-x" }
   s.source_files  = "ios/AliyunPlayView/**/*.{h,m}"
 
   s.dependency 'React'

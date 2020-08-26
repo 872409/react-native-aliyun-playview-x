@@ -28,6 +28,7 @@
     "prop-types": "15.5.8",
     "ts-object-utils": "0.0.5"
   },
+
   "deprecated": false,
   "description": "阿里云点播组件的封装",
   "devDependencies": {
@@ -42,6 +43,7 @@
     "native",
     "react-native-aliyun-playview-x"
   ],
+  "homepage": "https://github.com/872409/react-native-aliyun-playview-x",
   "license": "MIT",
   "main": "src/AliyunPlayView.js",
   "name": "react-native-aliyun-playview-x",
