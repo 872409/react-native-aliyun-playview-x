@@ -23,7 +23,7 @@ RCT_EXPORT_METHOD(uploadVideo:(NSDictionary *)params)
     NSString *mp4Path = [RCTConvert NSString:params[@"mp4Path"]];
      _type = [RCTConvert NSString:params[@"type"]];
     NSLog(@"类型%@%@",_type,mp4Path);
-  NSLog(@"accessKeyId%@,accessKeySecret%@,securityToken%@,mp4Path%@",accessKeyId,accessKeySecret,securityToken,mp4Path);
+  NSLog(@"accessKeyId:%@,accessKeySecret:%@,securityToken:%@,mp4Path%@",accessKeyId,accessKeySecret,securityToken,mp4Path);
     _client = [[VODUploadSVideoClient alloc] init];
     _client.delegate = self;
     _client.transcode = false;//是否转码，建议开启转码
