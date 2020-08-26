@@ -1,12 +1,5 @@
-/**
- * @filename AliyunPlayView.tsx
- * @author 何晏波
- * @QQ 1054539528
- * @date 2019/5/15
- * @Description: 封装阿里云点播播放器
- */
-import React, {Component} from 'react'
-import {findNodeHandle, requireNativeComponent, UIManager} from 'react-native'
+import React, {Component}                                  from 'react';
+import {findNodeHandle, requireNativeComponent, UIManager} from 'react-native';
 //@ts-ignore
 const AliyunPlayer = requireNativeComponent('AliyunPlay', AliyunPlayView);
 
@@ -25,7 +18,7 @@ export default class AliyunPlayView extends Component<Props> {
      */
     stop = () => {
         this.sendCommand("stop");
-    }
+    };
 
     /**
      *  功能：暂停播放视频
@@ -33,7 +26,7 @@ export default class AliyunPlayView extends Component<Props> {
      */
     pause = () => {
         this.sendCommand("pause");
-    }
+    };
 
     /**
      *   功能：恢复播放视频
@@ -41,7 +34,7 @@ export default class AliyunPlayView extends Component<Props> {
      */
     resume = () => {
         this.sendCommand("resume");
-    }
+    };
 
     /**
      *   功能：恢复播放视频
@@ -49,7 +42,7 @@ export default class AliyunPlayView extends Component<Props> {
      */
     reset = () => {
         this.sendCommand("reset");
-    }
+    };
 
     /**
      *   功能：恢复播放视频
@@ -57,7 +50,7 @@ export default class AliyunPlayView extends Component<Props> {
      */
     rePlay = () => {
         this.sendCommand("rePlay");
-    }
+    };
 
     /**
      *  功能：跳转到指定位置进行播放，单位为秒
@@ -65,7 +58,7 @@ export default class AliyunPlayView extends Component<Props> {
      */
     seekToTime = (time) => {
         this.sendCommand("seekToTime", [time]);
-    }
+    };
 
     /**
      * 调用原生方法
@@ -83,6 +76,6 @@ export default class AliyunPlayView extends Component<Props> {
     }
 
     render() {
-        return <AliyunPlayer {...this.props} />
+        return <AliyunPlayer {...this.props} />;
     }
 }
