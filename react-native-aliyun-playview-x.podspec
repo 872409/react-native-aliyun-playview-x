@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://github.com/872409/react-native-aliyun-playview-x" }
-  s.source_files  = "ios/AliyunPlayView/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m}"
 
   s.dependency 'React'
   s.dependency 'VODUpload'
