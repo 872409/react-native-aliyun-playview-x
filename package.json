@@ -47,5 +47,5 @@
   "license": "MIT",
   "main": "src/index.js",
   "name": "react-native-aliyun-playview-x",
-  "version": "1.1.2"
+  "version": "1.1.3"
 }
