@@ -8,7 +8,7 @@ RCT_EXPORT_MODULE()
 - (NSArray<NSString *> *)supportedEvents
 {
   return @[
-      @"onUploadSucceed",
+      @"OnUploadSucceed",
       @"OnUploadFailed",
       @"OnUploadProgress",
       @"OnUploadTokenExpired",
@@ -26,6 +26,8 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)config callback:(RCTResponseSenderBlock)c
 
     // create VODUploadClient object
     self.uploader = [VODUploadClient new];
+    self.uploader.recordUploadProgress = NO;
+
 
     // weakself
     __weak typeof(self) weakSelf = self;
@@ -33,7 +35,7 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)config callback:(RCTResponseSenderBlock)c
     // setup callback
     OnUploadFinishedListener FinishCallbackFunc = ^(UploadFileInfo* fileInfo, VodUploadResult* result){
         NSLog(@"upload finished callback videoid: %@", self.videoId);
-        [self sendEventWithName:@"onUploadSucceed" body:@{
+        [self sendEventWithName:@"OnUploadSucceed" body:@{
             @"videoId": self.videoId,
             @"bucket": result.bucket,
             @"endpoint": result.endpoint
@@ -99,6 +101,7 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)config callback:(RCTResponseSenderBlock)c
     listener.retryResume = RetryResumeCallbackFunc;
     listener.started = UploadStartedCallbackFunc;
 
+//    [self.uploader init:listener];
     // init with upload address and upload auth
     [self.uploader setListener:listener];
 
@@ -108,6 +111,7 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)config callback:(RCTResponseSenderBlock)c
 
 RCT_EXPORT_METHOD(addFile:(NSDictionary *)file)
 {
+    NSLog(@"addFile: %@",file);
     NSString *filePath = [RCTConvert NSString:file[@"path"]];
     NSString *type = [RCTConvert NSString:file[@"type"]];
     NSString *title = [RCTConvert NSString:file[@"title"]];
@@ -178,6 +182,7 @@ RCT_EXPORT_METHOD(cancelFile:(int)index)
  */
 RCT_EXPORT_METHOD(start)
 {
+
     [self.uploader start];
 }
 

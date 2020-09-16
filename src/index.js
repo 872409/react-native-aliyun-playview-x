@@ -1,11 +1,12 @@
 import { NativeModules, NativeEventEmitter } from 'react-native'
-import AliyunPlayView from './AliyunPlayView'
-const { AliyunVodFileUpload, AliyunVodVideoUpload } = NativeModules
+import AliyunPlayView from './AliyunPlayView';
+import AliyunVod      from './AliyunVod';
 
-export const AliyunVodFileUploadEmitter = new NativeEventEmitter(AliyunVodFileUpload)
+const {AliyunVodFileUpload} = NativeModules;
+
+export const AliyunVodFileUploadEmitter = new NativeEventEmitter(AliyunVodFileUpload);
 
 export {
-  AliyunPlayView,
-  AliyunVodFileUpload,
-  AliyunVodVideoUpload
-}
+    AliyunPlayView,
+    AliyunVod
+};
